@@ -13,7 +13,6 @@ export class List extends Component {
         fetch('https://api.nal.usda.gov/ndb/search/?format=json&&max=25&offset=0&api_key=72uBmLyZAbzvo6dqvXQxcCtzMy3sj0I6m3THr2yu')
             .then((res) => res.json())
             .then((body) => {
-                console.log(body)
                 this.setState({ list: body.list.item })
             });
     }
